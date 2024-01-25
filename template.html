@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>一日一〇.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>一日一<span style="color: #ba2636;">〇</span>.com</h1>
+    </header>
+
+    <div class="section">
+        <h2 class="section-title">一日一<span style="color: #ba2636;">天気</span></h2>
+        <div id="weatherCarousel" class="carousel slide" data-ride="carousel">
+            <!-- インジケーター -->
+            <ol class="carousel-indicators">
+                <li data-target="#weatherCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#weatherCarousel" data-slide-to="1"></li>
+                <li data-target="#weatherCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- スライド -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h3>今日</h3>
+                    <p>{today_date}</p>
+                    <p><img src="{today_weather_image_url}" alt="今日の天気">{today_telop}</p>
+                    <p>最低: {today_min_temp}°C 最高: {today_max_temp}°C</p>
+                    <p>{today_wind}</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>明日</h3>
+                    <p>{tomorrow_date}</p>
+
+                    <p><img src="{tomorrow_weather_image_url}" alt="明日の天気">{tomorrow_telop}</p>
+                    <p>最低: {tomorrow_min_temp}°C 最高: {tomorrow_max_temp}°C</p>
+                    <p>{tomorrow_wind}</p>
+                </div>
+                <div class="carousel-item">
+                    <h3>明後日</h3>
+                    <p>{day_after_tomorrow_date}</p>
+                    <p><img src="{day_after_tomorrow_weather_image_url}" alt="明後日の天気">{day_after_tomorrow_telop}</p>
+                    <p>最低: {day_after_tomorrow_min_temp}°C 最高: {day_after_tomorrow_max_temp}°C</p>
+                    <p>{day_after_tomorrow_wind}</p>
+                </div>
+            </div>
+
+            <!-- コントロール -->
+            <a class="carousel-control-prev" href="#weatherCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">前へ</span>
+            </a>
+            <a class="carousel-control-next" href="#weatherCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">次へ</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">一日一<span style="color: #ba2636;">枚</span></h2>
+        <form id="imageForm">
+            <div class="form-group">
+                <input type="text" class="form-control" name="user_input" placeholder="どんな画像を生成する？">
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="beauty_mode" name="beauty_mode">
+                    <label class="custom-control-label" for="beauty_mode">美女モード</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">画像生成</button>
+        </form>
+    </div>
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel"><span style="color: #ffffff;">今日の一枚</span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- スピナーの追加 -->
+                    <div class="d-flex justify-content-center" id="spinner">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="sr-only">読み込み中...</span>
+                        </div>
+                    </div>
+                    <img src="" id="generatedImage" alt="Generated Image" class="img-fluid" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">一日一<span style="color: #ba2636;">名言</span></h2>
+        <p>"{meigen}"</p>
+        <p>- {auther}</p>
+    </div>
+
+    <!-- 占いセクション -->
+    <div class="section">
+        <h2 class="section-title">一日一<span style="color: #ba2636;">占い</span></h2>
+        <!-- ここに占いデータを表示 -->
+        {horoscope_html}
+    </div>
+
+
+    <div class="section">
+        <p></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 一日一〇.com rejirejihogehoge</p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

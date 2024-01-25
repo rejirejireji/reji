@@ -1,0 +1,92 @@
+body {
+    font-family: 'Kaisei Opti', serif;
+    font-size: 1.2em;
+    background-size: cover;
+    background-color: #516275;
+    color: #3a3a3a;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    font-size: 2em;
+    background-color: #7e90a7;
+    color: white;
+    padding: 10px 0;
+}
+
+.section {
+    font-size: 1.5em;
+    padding: 20px;
+    color: white;
+    margin: auto;
+    max-width: 800px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #060b17;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.horoscope h3 {
+    cursor: pointer;
+}
+
+.horoscope-title {
+    margin-bottom: 10px;
+}
+
+.horoscope-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.horoscope-link:hover {
+    text-decoration: underline;
+}
+
+.carousel-indicators li {
+    background-color: rgb(255, 255, 255);
+}
+
+.carousel-indicators  {
+   top: 18.5rem;
+}
+
+.carousel-caption {
+    padding-top: 0px;
+    /* キャプションの上部に余白を追加 */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 背景を半透明にすることで読みやすくする */
+}
+
+.carousel-item {
+    min-height: 300px;
+    /* カルーセルアイテムの最小高さを設定 */
+}
+
+.modal-content {
+    background-color: #2b2d2f;
+}
+
+.custom-switch .custom-control-label::before {
+    top: 1.1rem;
+}
+
+.custom-switch .custom-control-label::after {
+    top: calc(1.1rem + 2px);
+}
