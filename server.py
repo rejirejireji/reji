@@ -10,7 +10,7 @@ import threading
 
 # -_- < zzz.....
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 LISTEN_PORT = 8080
 STATIC_DIR = "static"
