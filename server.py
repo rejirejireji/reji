@@ -7,10 +7,11 @@ import requests
 import os
 import json
 import threading
+from dotenv import load_dotenv
 
-# -_- < zzz.....
+load_dotenv()
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.environ.get("OPENAI_KEY"))
 
 LISTEN_PORT = 8080
 STATIC_DIR = "static"
