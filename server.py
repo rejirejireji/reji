@@ -8,6 +8,8 @@ import os
 import json
 import threading
 
+# -_- < zzz.....
+
 client = OpenAI(api_key="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")
 
 LISTEN_PORT = 8080
