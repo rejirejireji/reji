@@ -323,3 +323,4 @@ if __name__ == "__main__":
     with socketserver.TCPServer((HOST, PORT), ServerHandler) as server:
         print(f"サーバーがポート {PORT} で起動しました")
         server.serve_forever()
+    print(hogehoge)
